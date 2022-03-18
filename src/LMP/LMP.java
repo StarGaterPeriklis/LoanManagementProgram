@@ -4,6 +4,8 @@
  */
 package LMP;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 /**
  *
  * @author three
@@ -29,23 +31,23 @@ public class LMP extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jLoanCalculatorButton1 = new javax.swing.JButton();
+        jExitButton2 = new javax.swing.JButton();
+        jGenerateReceiptButton3 = new javax.swing.JButton();
+        jResetCalculatorButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        jInsertAnnualInterestRate = new javax.swing.JTextField();
+        jInsertNumberOfYears = new javax.swing.JTextField();
+        jInsertLoanAmount = new javax.swing.JTextField();
+        jMonthlyPayment = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jTextReceipt = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Loan Management Program");
@@ -77,21 +79,26 @@ public class LMP extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        jButton1.setText("Loan Calculator");
+        jLoanCalculatorButton1.setText("Loan Calculator");
 
-        jButton2.setText("Exit");
-
-        jButton3.setText("Generate Receipt");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jExitButton2.setText("Exit");
+        jExitButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jExitButton2ActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Reset Calculator");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jGenerateReceiptButton3.setText("Generate Receipt");
+        jGenerateReceiptButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jGenerateReceiptButton3ActionPerformed(evt);
+            }
+        });
+
+        jResetCalculatorButton4.setText("Reset Calculator");
+        jResetCalculatorButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jResetCalculatorButton4ActionPerformed(evt);
             }
         });
 
@@ -101,13 +108,13 @@ public class LMP extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(48, 48, 48)
-                .addComponent(jButton1)
+                .addComponent(jLoanCalculatorButton1)
                 .addGap(95, 95, 95)
-                .addComponent(jButton4)
+                .addComponent(jResetCalculatorButton4)
                 .addGap(99, 99, 99)
-                .addComponent(jButton3)
+                .addComponent(jGenerateReceiptButton3)
                 .addGap(67, 67, 67)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jExitButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(177, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -115,10 +122,10 @@ public class LMP extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(45, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton4)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2))
+                    .addComponent(jLoanCalculatorButton1)
+                    .addComponent(jResetCalculatorButton4)
+                    .addComponent(jGenerateReceiptButton3)
+                    .addComponent(jExitButton2))
                 .addGap(41, 41, 41))
         );
 
@@ -127,7 +134,7 @@ public class LMP extends javax.swing.JFrame {
         jLabel1.setText("Insert number of years: (ex: 5)");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, -1, -1));
 
-        jLabel2.setText("Inser Loan Amount: (ex: 1000");
+        jLabel2.setText("Insert Loan Amount: (ex: 1000");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, -1, -1));
 
         jLabel3.setText("Monthly payment:");
@@ -139,28 +146,28 @@ public class LMP extends javax.swing.JFrame {
         jLabel5.setText("Insert Annual Interest Rate: (ex: 3.5) ");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jInsertAnnualInterestRate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jInsertAnnualInterestRateActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 170, 30));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 252, 170, 30));
+        getContentPane().add(jInsertAnnualInterestRate, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 170, 30));
+        getContentPane().add(jInsertNumberOfYears, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 252, 170, 30));
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        jInsertLoanAmount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                jInsertLoanAmountActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 312, 170, 30));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 372, 170, 30));
+        getContentPane().add(jInsertLoanAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 312, 170, 30));
+        getContentPane().add(jMonthlyPayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 372, 170, 30));
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 432, 170, 30));
 
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jTextReceipt.setColumns(20);
+        jTextReceipt.setRows(5);
+        jScrollPane1.setViewportView(jTextReceipt);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -185,21 +192,38 @@ public class LMP extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jInsertAnnualInterestRateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jInsertAnnualInterestRateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jInsertAnnualInterestRateActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void jInsertLoanAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jInsertLoanAmountActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_jInsertLoanAmountActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void jResetCalculatorButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jResetCalculatorButton4ActionPerformed
+        jInsertAnnualInterestRate.setText(null);
+        jInsertNumberOfYears.setText(null);
+        jInsertLoanAmount.setText(null);
+        jMonthlyPayment.setText(null);
+        jTextField5.setText(null);
+        jTextReceipt.setText(null);
+    }//GEN-LAST:event_jResetCalculatorButton4ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jGenerateReceiptButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jGenerateReceiptButton3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jGenerateReceiptButton3ActionPerformed
+
+    
+    
+private JFrame frame;
+    private void jExitButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jExitButton2ActionPerformed
+
+frame = new JFrame("Exit");
+    if (JOptionPane.showConfirmDialog(frame, "Confirm if you want to exit","Loan Management Program",
+    JOptionPane.YES_NO_OPTION)== JOptionPane.YES_NO_OPTION){
+    System.exit(0);
+    }
+    }//GEN-LAST:event_jExitButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -237,25 +261,25 @@ public class LMP extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jExitButton2;
+    private javax.swing.JButton jGenerateReceiptButton3;
+    private javax.swing.JTextField jInsertAnnualInterestRate;
+    private javax.swing.JTextField jInsertLoanAmount;
+    private javax.swing.JTextField jInsertNumberOfYears;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JButton jLoanCalculatorButton1;
+    private javax.swing.JTextField jMonthlyPayment;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JButton jResetCalculatorButton4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextArea jTextReceipt;
     // End of variables declaration//GEN-END:variables
 }
