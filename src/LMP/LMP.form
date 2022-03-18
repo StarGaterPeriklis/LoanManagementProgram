@@ -118,6 +118,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Loan Calculator"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jLoanCalculatorButton1ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jExitButton2">
           <Properties>
