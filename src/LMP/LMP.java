@@ -80,6 +80,11 @@ public class LMP extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
         jLoanCalculatorButton1.setText("Loan Calculator");
+        jLoanCalculatorButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jLoanCalculatorButton1ActionPerformed(evt);
+            }
+        });
 
         jExitButton2.setText("Exit");
         jExitButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -224,6 +229,29 @@ frame = new JFrame("Exit");
     System.exit(0);
     }
     }//GEN-LAST:event_jExitButton2ActionPerformed
+
+    private void jLoanCalculatorButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLoanCalculatorButton1ActionPerformed
+//-----------
+double annulInterestRate = Double.parseDouble(jInsertAnnualInterestRate.getText());
+double monthlyInterestRate = annulInterestRate / 1200;
+
+int numberOfYears = Integer.parseInt(jInsertNumberOfYears.getText());
+double loanAmount = Double.parseDouble(jInsertLoanAmount.getText());
+
+//-----------
+
+double monthlyPayment = loanAmount * monthlyInterestRate/(1-1 /Math.pow(1+ monthlyInterestRate,numberOfYears * 12));
+String imonthlyPayment;
+imonthlyPayment = Double.toString(monthlyPayment);
+imonthlyPayment = String.format("£%.2f", monthlyPayment);
+jMonthlyPayment.setText(imonthlyPayment);
+//-----------
+double totalPayment = monthlyPayment * numberOfYears * 12 ;
+String itotalPayment;
+itotalPayment = String.format("£%.2f", totalPayment);
+jTextField5.setText(itotalPayment);
+
+    }//GEN-LAST:event_jLoanCalculatorButton1ActionPerformed
 
     /**
      * @param args the command line arguments
