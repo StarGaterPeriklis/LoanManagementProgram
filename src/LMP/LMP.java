@@ -215,7 +215,32 @@ public class LMP extends javax.swing.JFrame {
     }//GEN-LAST:event_jResetCalculatorButton4ActionPerformed
 
     private void jGenerateReceiptButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jGenerateReceiptButton3ActionPerformed
-        // TODO add your handling code here:
+
+String annualInterestRate = String.format(jInsertAnnualInterestRate.getText());
+String numberOfYears = String.format(jInsertNumberOfYears.getText());
+String loanAmount = String.format(jInsertLoanAmount.getText());
+
+String monthlyPayment = String.format(jMonthlyPayment.getText());
+String totalPayment = String.format(jTextField5.getText());
+
+//-------------------------------------------------------------------
+
+int refs= 1325 + (int) (Math.random()*4238);
+
+//-------------------------------------------------------------------
+
+jTextReceipt.append("\tLoan Management Program\n" + 
+"Reference:\t\t\t" + refs +
+"\n===========================================\t " +
+"\nInterest rate:\t\t\t " + annualInterestRate +
+"\nRepayment Years:\t\t\t " + numberOfYears +       
+"\nAmount of Loan:\t\t\t " + "<<"+ loanAmount +      
+"\nMonthly Payment:\t\t " + monthlyPayment + 
+"\nTotal Payment:\t\t\t " + totalPayment +
+"\n\n\t\tThank You\n" );
+
+
+
     }//GEN-LAST:event_jGenerateReceiptButton3ActionPerformed
 
     
