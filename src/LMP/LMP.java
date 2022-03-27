@@ -56,6 +56,8 @@ public class LMP extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
+        jLabel6.setBackground(new java.awt.Color(51, 204, 255));
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Loan Management Program");
 
@@ -80,6 +82,7 @@ public class LMP extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
+        jLoanCalculatorButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLoanCalculatorButton1.setText("Loan Calculator");
         jLoanCalculatorButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +90,7 @@ public class LMP extends javax.swing.JFrame {
             }
         });
 
+        jExitButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jExitButton2.setText("Exit");
         jExitButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,6 +98,7 @@ public class LMP extends javax.swing.JFrame {
             }
         });
 
+        jGenerateReceiptButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jGenerateReceiptButton3.setText("Generate Receipt");
         jGenerateReceiptButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,6 +106,7 @@ public class LMP extends javax.swing.JFrame {
             }
         });
 
+        jResetCalculatorButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jResetCalculatorButton4.setText("Reset Calculator");
         jResetCalculatorButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,41 +120,46 @@ public class LMP extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(48, 48, 48)
-                .addComponent(jLoanCalculatorButton1)
-                .addGap(95, 95, 95)
-                .addComponent(jResetCalculatorButton4)
-                .addGap(99, 99, 99)
-                .addComponent(jGenerateReceiptButton3)
-                .addGap(67, 67, 67)
-                .addComponent(jExitButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(183, Short.MAX_VALUE))
+                .addComponent(jLoanCalculatorButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
+                .addComponent(jResetCalculatorButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addComponent(jGenerateReceiptButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(82, 82, 82)
+                .addComponent(jExitButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(68, 68, 68))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(45, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLoanCalculatorButton1)
-                    .addComponent(jResetCalculatorButton4)
-                    .addComponent(jGenerateReceiptButton3)
-                    .addComponent(jExitButton2))
+                    .addComponent(jLoanCalculatorButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jResetCalculatorButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jGenerateReceiptButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jExitButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41))
         );
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 550, 940, -1));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Insert number of years: (ex: 5)");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, -1, -1));
 
-        jLabel2.setText("Insert Loan Amount: (ex: 1000");
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setText("Insert Loan Amount: (ex: 1000)");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Monthly payment:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setText("Total Payment:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Insert Annual Interest Rate: (ex: 3.5) ");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
 
@@ -157,7 +168,18 @@ public class LMP extends javax.swing.JFrame {
                 jInsertAnnualInterestRateActionPerformed(evt);
             }
         });
+        jInsertAnnualInterestRate.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jInsertAnnualInterestRateKeyTyped(evt);
+            }
+        });
         getContentPane().add(jInsertAnnualInterestRate, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 170, 30));
+
+        jInsertNumberOfYears.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jInsertNumberOfYearsKeyTyped(evt);
+            }
+        });
         getContentPane().add(jInsertNumberOfYears, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 252, 170, 30));
 
         jInsertLoanAmount.addActionListener(new java.awt.event.ActionListener() {
@@ -165,12 +187,24 @@ public class LMP extends javax.swing.JFrame {
                 jInsertLoanAmountActionPerformed(evt);
             }
         });
+        jInsertLoanAmount.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jInsertLoanAmountKeyTyped(evt);
+            }
+        });
         getContentPane().add(jInsertLoanAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 312, 170, 30));
+
+        jMonthlyPayment.setEditable(false);
+        jMonthlyPayment.setBackground(new java.awt.Color(0, 204, 255));
         getContentPane().add(jMonthlyPayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 372, 170, 30));
+
+        jTextField5.setEditable(false);
+        jTextField5.setBackground(new java.awt.Color(0, 204, 255));
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 432, 170, 30));
 
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
+        jTextReceipt.setEditable(false);
         jTextReceipt.setColumns(20);
         jTextReceipt.setRows(5);
         jScrollPane1.setViewportView(jTextReceipt);
@@ -231,17 +265,13 @@ int refs= 1325 + (int) (Math.random()*4238);
 //-------------------------------------------------------------------
 
 jTextReceipt.append("\tLoan Management Program\n" + 
-"Reference:\t\t\t" + refs +
 "\n===========================================\t " +
 "\nInterest rate:\t\t\t " + annualInterestRate +
-"\nRepayment Years:\t\t\t " + numberOfYears +       
-"\nAmount of Loan:\t\t\t " + "<<"+ loanAmount +      
+"\nRepayment Years:\t\t " + numberOfYears +       
+"\nAmount of Loan:\t\t " + "€"+ loanAmount +      
 "\nMonthly Payment:\t\t " + monthlyPayment + 
 "\nTotal Payment:\t\t\t " + totalPayment +
-"\n\n\t\tThank You\n" );
-
-
-
+"\n\n\t\t \n" );
     }//GEN-LAST:event_jGenerateReceiptButton3ActionPerformed
 
     
@@ -269,15 +299,33 @@ double loanAmount = Double.parseDouble(jInsertLoanAmount.getText());
 double monthlyPayment = loanAmount * monthlyInterestRate/(1-1 /Math.pow(1+ monthlyInterestRate,numberOfYears * 12));
 String imonthlyPayment;
 imonthlyPayment = Double.toString(monthlyPayment);
-imonthlyPayment = String.format("£%.2f", monthlyPayment);
+imonthlyPayment = String.format("€%.2f", monthlyPayment);
 jMonthlyPayment.setText(imonthlyPayment);
 //-----------
 double totalPayment = monthlyPayment * numberOfYears * 12 ;
 String itotalPayment;
-itotalPayment = String.format("£%.2f", totalPayment);
+itotalPayment = String.format("€%.2f", totalPayment);
 jTextField5.setText(itotalPayment);
 
     }//GEN-LAST:event_jLoanCalculatorButton1ActionPerformed
+
+    private void jInsertAnnualInterestRateKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jInsertAnnualInterestRateKeyTyped
+
+    }//GEN-LAST:event_jInsertAnnualInterestRateKeyTyped
+
+    private void jInsertNumberOfYearsKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jInsertNumberOfYearsKeyTyped
+           char c = evt.getKeyChar();
+        if (!Character.isDigit(c)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jInsertNumberOfYearsKeyTyped
+
+    private void jInsertLoanAmountKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jInsertLoanAmountKeyTyped
+           char c = evt.getKeyChar();
+        if (!Character.isDigit(c)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jInsertLoanAmountKeyTyped
 
     /**
      * @param args the command line arguments
